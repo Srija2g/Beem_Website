@@ -2,15 +2,16 @@
 This project automates UI test scenarios for an Fintech website using Selenium and TestNG. 
 It demonstrates an end-to-end automation framework covering login, Subscription, Subscription management and home page.
 
-## Tech Stack
-** Language:** Java
-** Build tool:** Maven
-** Framework:** TestNG, Page Object Model
-** UI Automation:** Selenium webdriver
-** Reporting:** Extent Reports / Allure reports
-** Version control:** GitHub
-** IDE:** IntelliJ IDE/ Eclipse
-** CI/CD:** Jenkins
+## 🛠️ Tech Stack
+- **Language:** Java
+- **Build Tool:** Maven
+- **Framework:** TestNG
+- **UI Automation:** Selenium WebDriver
+- **API Automation:** Rest Assured
+- **Reporting:** Extent Reports / Allure Reports
+- **Version Control:** GitHub
+- **IDE:** IntelliJ IDEA / Eclipse
+- **CI/CD (optional):** Jenkins
 
 ## Project structure
 | Folder/File| Description|
