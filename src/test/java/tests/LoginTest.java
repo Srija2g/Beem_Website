@@ -1,15 +1,13 @@
 package tests;
 
 import base.BaseClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.LoginPage;
 
 public class LoginTest extends BaseClass {
     LoginPage loginPage;
 
-    @BeforeMethod
+    @BeforeClass
     public void setUp(){
         initializeDriver();
         loginPage = new LoginPage(driver);
@@ -20,12 +18,13 @@ public class LoginTest extends BaseClass {
         loginPage.loginButtonClickable();
     }
 
-    @AfterMethod
+    @Test
+    public void tryLoginWithoutCredentials() throws InterruptedException {
+        loginPage.loginWithoutCredentials();
+    }
+
+    @AfterClass
     public void tearDownTest(){
         tearDown();
     }
-
-
-
-
 }
