@@ -7,7 +7,7 @@ import pages.LoginPage;
 public class LoginTest extends BaseClass {
     LoginPage loginPage;
 
-    @BeforeClass
+    @BeforeMethod
     public void setUp(){
         initializeDriver();
         loginPage = new LoginPage(driver);
@@ -23,7 +23,12 @@ public class LoginTest extends BaseClass {
         loginPage.loginWithoutCredentials();
     }
 
-    @AfterClass
+    @Test
+    public void tryLoginWithValidCredentials(){
+        loginPage.loginWithValidCredentials();
+    }
+
+    @AfterMethod
     public void tearDownTest(){
         tearDown();
     }
