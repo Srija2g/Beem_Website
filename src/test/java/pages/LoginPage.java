@@ -61,7 +61,19 @@ public class LoginPage extends BaseClass {
 
         WebElement welcomeBack = wait.until(ExpectedConditions.visibilityOfElementLocated(welcomeBackHomeScreen));
         Assert.assertTrue(welcomeBack.isDisplayed());
+    }
 
+    public void loginWithInvalidCredentials(){
+        utils.click(loginBtn);
+        utils.waitForVisible(helloText);
+        utils.type(phoneFieldHelloPage, ConfigReader.get("phoneNumber"));
+        utils.click(sendVerificationCode);
+        utils.waitForVisible(enterSecreteCodeHeading);
+
+        utils.type(codeDigit1, ConfigReader.get("digit_1"));
+        utils.type(codeDigit2, ConfigReader.get("digit_2"));
+        utils.type(codeDigit3, ConfigReader.get("digit_3"));
+        utils.type(codeDigit4, ConfigReader.get("digit_5"));
 
     }
 
