@@ -28,6 +28,11 @@ public class LoginTest extends BaseClass {
         loginPage.loginWithValidCredentials();
     }
 
+    @Test
+    public void tryLoginWithInvalidCredentials(){
+        loginPage.loginWithInvalidCredentials();
+    }
+
     @AfterMethod
     public void tearDownTest(){
         tearDown();
